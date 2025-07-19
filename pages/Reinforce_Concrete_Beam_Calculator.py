@@ -43,8 +43,11 @@ M_ue = st.sidebar.radio("Input maximum bending moment",
                         ["From Beam Calculator Diagram","Manually add value"])
 
 if M_ue == "From Beam Calculator Diagram":
-    M_ue = st.session_state.max_moment
-    st.sidebar.write ("$M_u$ =", str(round(M_ue,3)), "kN-m")
+    if 'max_moment' not in st.session_state:
+        st.sidebar.error("Maximum bending moment has yet been calculated!")
+    elif 'max_moment' in st.session_state:
+        M_ue = st.session_state.max_moment
+        st.sidebar.write ("$M_u$ =", str(round(M_ue,3)), "kN-m")
 elif M_ue == "Manually add value":
     M_ue = st.sidebar.number_input('$M_u$ (kN-m)',value=(120.0))
 
