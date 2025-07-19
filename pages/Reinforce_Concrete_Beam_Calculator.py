@@ -220,7 +220,7 @@ elif M_ue > 0 or 'max_moment' in st.session_state:
         \end{align*}
         """)
         
-        st.write("Since the nominal moment is insufficient, compression reinforcement is required to increse the amount of tension reinforcement " \
+        st.write("The nominal moment is insufficient, compression reinforcement is required to increase the amount of tension reinforcement " \
         "enough to achieve sufficient strength required")
 
         M_ns = M_ue/0.9 - M_n/1e6
