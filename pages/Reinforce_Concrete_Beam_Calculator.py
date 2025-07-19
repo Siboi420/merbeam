@@ -286,7 +286,7 @@ elif M_ue > 0 or 'max_moment' in st.session_state:
         M_n &= """+str(round(Cc,3))+r""" \cdot \left( """+str(round(d,3))+r""" - \frac{"""+str(round(a,3))+r"""}{2} \right) + """+str(round(Cs,3))+r""" \cdot ("""+str(round(d,3))+r""" - """+str(round(d_prime,3))+r""") \\
             &= """+str(round(M_n,3))+r""" \; \text{N-mm} \\
         &= """+str(round(M_n/1e6,3))+r""" \; \text{kN-m} \\
-        \phi M_n &= 0.9 * """+str(round(M_n/1e6,3))+r""" 
+        \phi M_n &= 0.9 \cdot """+str(round(M_n/1e6,3))+r""" 
         = """+ str(round(fM_n/1e6,3)) +r"""\; \text{kN-m} \\
         M_u &= """+ str(round(M_ue,3)) +r""" \; \text{kN-m} \\
         DCR &= \frac{M_u}{\phi M_n} =\frac{"""+ str(round(M_ue,3)) +r"""}{"""+ str(round(fM_n/1e6,3)) +r"""} = """+ str(round(M_ue/(fM_n/1e6),3)) +r"""
