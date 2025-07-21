@@ -122,7 +122,7 @@ elif M_ue > 0 or 'max_moment' in st.session_state:
             \begin{align*}
             A_{s,balance} &= \frac{1}{f_y} \left(0.85 \cdot f_c' \cdot \beta_1 \cdot \frac{\epsilon_{cu}}{\epsilon_{cu}+\epsilon_y} \cdot d \right) \\
             &= \frac{1}{"""+ str(round(f_yl,3)) +r"""} \cdot \left(0.85 \cdot """+ str(round(f_c)) +r""" \cdot """+ str(round(beta_1,3)) +r""" \cdot \frac{0.003}{0.003+ """+ str(round(epsilon_y,3)) +r"""} \right) \\
-            &= """+ str(round(A_smax,3)) +r""" \; \text{mm}^2
+            &= """+ str(round(A_sbal,3)) +r""" \; \text{mm}^2
             \end{align*}
             """)
     st.write("Therefore the maximum area of reinforcement is:")
