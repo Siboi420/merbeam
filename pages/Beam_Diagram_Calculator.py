@@ -352,16 +352,16 @@ def convert_df(df: pd.DataFrame):
 
 def main():
     st.title("Beam Calculator with Moment and Shear Force Diagrams (Bar Chart)")
-    st.sidebar.image("/imgs/logo_polinema.png", width=100) #"./imgs/logo_polinema.png"
+    st.sidebar.image("./imgs/logo_polinema.png", width=100) #"./imgs/logo_polinema.png"
     st.sidebar.header("Beam Type")
 
     beam_type = st.sidebar.radio(
         "Select the type of beam:", ("Simply Supported Beam", "Cantilever Beam")
     )
     if beam_type == "Simply Supported Beam":
-        st.image("/imgs/moment.png", caption="Simply Supported Beam")
+        st.image("./imgs/moment.png", caption="Simply Supported Beam")
     else:
-        st.image("/imgs/Cantilever.jpg", caption="Cantilevered Beam")
+        st.image("./imgs/Cantilever.jpg", caption="Cantilevered Beam")
 
     st.sidebar.header("Beam Parameters")
     length = st.sidebar.number_input(
